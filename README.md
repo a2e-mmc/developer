@@ -30,14 +30,14 @@ Resolving deltas: 100% (44361/44361), done.
 Checking out files: 100% (4599/4599), done.
 ```
 
-4. Set upstream to point to the MMC version of the code
+4. Create remote for the main a2e-mmc repository
 ```
-equon:~/a2e-mmc/WRF$ cd WRF && git remote add upstream git@github.com:a2e-mmc/WRF.git
+equon:~/a2e-mmc/WRF$ cd WRF && git remote add a2emmc git@github.com:a2e-mmc/WRF.git
 equon:~/a2e-mmc/WRF$ git remote -v
 origin    git@github.com:ewquon/WRF.git (fetch)
 origin    git@github.com:ewquon/WRF.git (push)
-upstream    git@github.com:a2e-mmc/WRF.git (fetch)
-upstream    git@github.com:a2e-mmc/WRF.git (push)
+a2emmc    git@github.com:a2e-mmc/WRF.git (fetch)
+a2emmc    git@github.com:a2e-mmc/WRF.git (push)
 ```
 
 5. Switch to the development branch, noting that NCAR’s practice is to call it `develop` instead of `dev`
@@ -189,13 +189,13 @@ remote:
 
 1. Get an update on everything that’s been happening.
 ```
-equon:~/a2e-mmc/WRF$ git fetch upstream
+equon:~/a2e-mmc/WRF$ git fetch a2emmc
 remote: Enumerating objects: 27, done.
 remote: Counting objects: 100% (27/27), done.
 remote: Total 27 (delta 26), reused 26 (delta 26), pack-reused 0
 Unpacking objects: 100% (27/27), done.
 From github.com:a2e-mmc/WRF
-* [new branch]        HWRF            -> upstream/HWRF
+* [new branch]        HWRF            -> a2emmc/HWRF
 ...
 ```
 
@@ -208,7 +208,7 @@ Your branch is up to date with 'origin/develop'.
 
 3. Get latest changes
 ```
-equon:~/a2e-mmc/WRF$ git pull upstream develop
+equon:~/a2e-mmc/WRF$ git pull a2emmc develop
 From github.com:a2e-mmc/WRF
 * branch              develop    -> FETCH_HEAD
 Already up to date.
